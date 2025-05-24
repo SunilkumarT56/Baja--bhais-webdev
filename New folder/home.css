@@ -1,0 +1,121 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  /* color: white !important; */
+}
+body {
+  background-color: rgba(255, 255, 255);
+  min-height: 100vh;
+  background-color: black; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* background-image: url(./bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  height: 60px;
+}
+nav a {
+  height: 100%;
+  font-weight: bold;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  position: relative;
+  transition: 0.5s;
+}
+/* .hover:hover {
+  transition: 0.5s;
+  background-color: #ccc;
+} */
+.hover::before {
+  content: "";
+  width: 0px;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  bottom: -4px;
+  transition: 0.5s;
+  background-color: red;
+}
+.hover:hover::before {
+  width: 100%;
+}
+.hover:active::before {
+  width: 50%;
+}
+.logo {
+  height: 75px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+.sidebar .logo {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgb(0, 0, 0);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li {
+  width: 100%;
+}
+.sidebar a {
+  width: 100%;
+}
+.material-symbols {
+  width: 100%;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+.showOnmobile {
+  display: none;
+}
+.material-symbol {
+  width: 100%;
+  font-size: 30px;
+  padding-top: 10px;
+}
+@media (max-width: 800px) {
+  .hideOnmobile {
+    display: none;
+  }
+  .showOnmobile {
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}

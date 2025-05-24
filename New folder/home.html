@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="home.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li>
+          <a
+            ><span class="material-symbol" onclick="sideClosebar()"
+              >&#10006;</span
+            ></a
+          >
+        </li>
+        <li><a href="#home" class="hover">Home</a></li>
+        <li><a href="#about" class="hover">About</a></li>
+        <li><a href="#services" class="hover">Services</a></li>
+        <li><a href="#portfolio" class="hover">Portfolio</a></li>
+        <li><a href="#contact" class="hover">Contact</a></li>
+        <li><a href="#blog" class="hover">Blog</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#"><img src="./bajalogo.png" class="logo" /></a>
+        </li>
+        <li class="hideOnmobile hover">
+          <a href="#about" class="hideOnmobile hover">About</a>
+        </li>
+        <li class="hideOnmobile hover">
+          <a href="#services" class="hideOnmobile hover">Services</a>
+        </li>
+        <li class="hideOnmobile hover">
+          <a href="#portfolio" class="hideOnmobile hover">Portfolio</a>
+        </li>
+        <li class="hideOnmobile hover">
+          <a href="#contact" class="hideOnmobile hover">Contact</a>
+        </li>
+        <li class="hideOnmobile hover">
+          <a href="#blog" class="hideOnmobile hover">Blog</a>
+        </li>
+        <span></span>
+        <li class="showOnmobile" onclick="showSiderbar()">
+          <a><span class="material-symbols">&#8801; </span></a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function showSiderbar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function sideClosebar() {
+        const close = document.querySelector(".sidebar");
+        close.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
